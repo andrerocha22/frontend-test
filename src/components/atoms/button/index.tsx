@@ -8,10 +8,11 @@ interface ButtonStyledProps {
   backgroundColor?: string;
   borderRadius?: string;
   isActive?: boolean;
-  testName?: string;
 }
 
-const Button = styled.button<ButtonStyledProps>`
+const ButtonConfirm = styled.button<ButtonStyledProps>`
+  border: none;
+  padding: 1rem 10rem;
   color: ${props => props.color};
   background-color: ${props => props.backgroundColor};
   border-radius: ${props => props.borderRadius};
@@ -19,12 +20,12 @@ const Button = styled.button<ButtonStyledProps>`
 
 export function ButtonPrimary(props: ButtonStyledProps) {
   return (
-    <Button
+    <ButtonConfirm
       {...props}
       onClick={props.handleClick}
-      data-test={`${props.testName}`}
+      data-test="component-button"
     >
       {props.children}
-    </Button>
+    </ButtonConfirm>
   );
 }

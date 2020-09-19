@@ -1,0 +1,28 @@
+html {
+  font-size: calc(16px / 1.6);
+}
+body {
+  margin: 0 auto;
+  font-family: 'Work Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+small,
+label,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+input {
+  font-family: 'Work Sans', sans-serif;
+}
