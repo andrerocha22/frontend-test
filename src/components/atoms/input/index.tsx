@@ -1,18 +1,18 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
-interface ValueInputProps {
+interface InputProps {
   icon?: string;
   backgroundColor?: string;
 }
 
-const ValueInputContainer = styled.div`
+const InputContainer = styled.div`
   display: flex;
   border: 1px solid #e1e8ed;
   width: 100%;
 `;
 
-const IconContainer = styled.img<ValueInputProps>`
+const IconContainer = styled.img<InputProps>`
   width: 56px;
   height: 56px;
   padding: 1.6rem;
@@ -30,20 +30,20 @@ const Input = styled.input`
   line-height: 2.4rem;
 `;
 
-export function ValueInput(props: ValueInputProps) {
+export function InputText(props: InputProps) {
   if (props.icon) {
     return (
-      <ValueInputContainer data-test="component-value-input">
+      <InputContainer data-test="component-value-input">
         <IconContainer {...props} src={props.icon} data-test="component-value-input-icon" />
         <Input type="number" />
-      </ValueInputContainer>
+      </InputContainer>
     );
   }
   {
     return (
-      <ValueInputContainer data-test="component-value-input">
+      <InputContainer data-test="component-value-input">
         <Input />
-      </ValueInputContainer>
+      </InputContainer>
     );
   }
 }

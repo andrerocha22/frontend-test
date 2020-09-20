@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { findByTestAttr } from '../../../test/testUtils';
-import { ValueInput } from './index';
+import { InputText } from './index';
 
 const setup = (props = {}) => {
   const setupProps = { ...props };
-  return shallow(<ValueInput {...setupProps} />);
+  return shallow(<InputText {...setupProps} />);
 };
 
 describe('Test value input', () => {

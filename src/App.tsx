@@ -1,9 +1,14 @@
 import * as React from 'react';
 import { ButtonPrimary } from './components/atoms/button';
-import arrow from './assets/icons/$.svg';
-import { ValueInput } from './components/atoms/input';
+import icon$ from './assets/icons/$.svg';
 import Card from './components/atoms/card';
-import { TitleText, BoldText } from './components/atoms/typography';
+import {
+  TitleText,
+  BoldText,
+  SecondaryText,
+  PrimaryText,
+} from './components/atoms/typography';
+import ValueInputContainer from './components/molecules/valueInput';
 
 const App: React.FunctionComponent = () => {
   return (
@@ -25,10 +30,16 @@ const App: React.FunctionComponent = () => {
       >
         <h2>Confirm</h2>
       </ButtonPrimary>
-      <ValueInput icon={arrow} backgroundColor="#F4F8FA" />
       <TitleText>
         Let's plan your <BoldText>saving goal</BoldText> .
       </TitleText>
+      <PrimaryText>Buy a house</PrimaryText>
+      <SecondaryText>Saving Goal</SecondaryText>
+      <ValueInputContainer
+        icon={icon$}
+        iconBackgroundColor="#F4F8FA"
+        label="Total amount"
+      />
       <Card
         primaryInfo="Monthly Amount"
         amount="$521"

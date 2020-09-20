@@ -13,7 +13,31 @@ export const TitleText = styled.p`
   color: #1b31a8;
 `;
 
+export const LabelText = styled.p`
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: #1c1e1f;
+`;
+
+export const PrimaryText = styled.p`
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  letter-spacing: -0.266667px;
+
+  color: #1c1e1f;
+`;
+
+export const SecondaryText = styled.p`
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+
+  color: #657786;
+`;
+
 export const BoldText = styled.span`
   font-weight: 600 !important;
 `;
-
