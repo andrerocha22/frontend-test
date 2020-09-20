@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test card card snapshot test  1`] = `
+<styled.article
+  data-test="component-card"
+>
+  <styled.div>
+    <styled.p>
+      Test primary information
+    </styled.p>
+    <styled.p>
+      $999999
+    </styled.p>
+  </styled.div>
+  <styled.p>
+    Test secondary information
+  </styled.p>
+</styled.article>
+`;

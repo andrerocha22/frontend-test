@@ -12,7 +12,7 @@ interface ButtonStyledProps {
 
 const ButtonConfirm = styled.button<ButtonStyledProps>`
   border: none;
-  padding: 1rem 10rem;
+  padding: 1.6rem 1rem;
   color: ${props => props.color};
   background-color: ${props => props.backgroundColor};
   border-radius: ${props => props.borderRadius};
