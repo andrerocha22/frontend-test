@@ -11,7 +11,7 @@ const defaultProps = {
   iconBackgroundColor: '#0f0f0f',
 };
 
-describe('test card', () => {
+describe('test value input', () => {
   const setup = (props = {}) => {
     const setupProps = { ...defaultProps, ...props };
     return shallow(<ValueInputContainer {...setupProps} />);
@@ -30,13 +30,13 @@ describe('test card', () => {
     expect(component.length).toBe(1);
   });
 
-  test('card snapshot test ', () => {
+  test('input for amount snapshot test ', () => {
     const wrapper = setup();
     component = findByTestAttr(wrapper, 'component-value-input');
     expect(component).toMatchSnapshot();
   });
 
-  test('card test props', () => {
+  test('input for amount test props', () => {
     const wrapper = setupMount();
     expect(wrapper.prop('label')).toEqual(defaultProps.label);
     expect(wrapper.prop('icon')).toEqual(defaultProps.icon);

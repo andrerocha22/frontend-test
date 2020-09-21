@@ -41,3 +41,20 @@ export const SecondaryText = styled.p`
 export const BoldText = styled.span`
   font-weight: 600 !important;
 `;
+
+export const DateSelectionPrimaryText = styled.span`
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  letter-spacing: -0.16px;
+  color: #1c1e1f;
+`;
+
+export const DateSelectionSecondaryText = styled.span`
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1c1e1f;
+`;

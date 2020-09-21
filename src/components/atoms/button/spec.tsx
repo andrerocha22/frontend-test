@@ -23,7 +23,7 @@ describe('Test Button component', () => {
 
   beforeEach(() => {
     const wrapper = setup();
-    component = findByTestAttr(wrapper, 'component-button');
+    component = findByTestAttr(wrapper, 'component-button-primary');
   });
 
   test('renders without error', () => {

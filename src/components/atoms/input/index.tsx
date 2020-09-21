@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react';
 import styled from 'styled-components';
 
+import CurrencyInput from 'react-currency-input';
+
 interface InputProps {
   icon?: string;
   backgroundColor?: string;
@@ -16,10 +18,10 @@ const IconContainer = styled.img<InputProps>`
   width: 56px;
   height: 56px;
   padding: 1.6rem;
-  background-color: ${props => props.backgroundColor};
+  background-color: ${(props) => props.backgroundColor};
 `;
 
-const Input = styled.input`
+const Input = styled.div`
   display: flex;
   width: 100%;
   background: #ffffff;
@@ -30,12 +32,38 @@ const Input = styled.input`
   line-height: 2.4rem;
 `;
 
-export function InputText(props: InputProps) {
+export function InputCurrency(props: InputProps) {
   if (props.icon) {
     return (
       <InputContainer data-test="component-value-input">
-        <IconContainer {...props} src={props.icon} data-test="component-value-input-icon" />
-        <Input type="number" />
+        <IconContainer
+          {...props}
+          src={props.icon}
+          data-test="component-value-input-icon"
+        />
+
+        <CurrencyInput
+          className="inputAmount"
+          style={{
+            display: 'flex',
+            width: '100%',
+            background: '#ffffff',
+            border: 'none',
+            padding: '1.6rem',
+            fontWeight: '600',
+            fontSize: '2rem',
+            lineHeight: '2.4rem',
+          }}
+          // onChangeEvent={(e) => {
+          //   handleChange(e.target.value);
+          // }}
+          maxLength="12"
+          // value={amount}
+          decimalSeparator="."
+          thousandSeparator=","
+          selectAllOnFocus
+          autoFocus
+        />
       </InputContainer>
     );
   }

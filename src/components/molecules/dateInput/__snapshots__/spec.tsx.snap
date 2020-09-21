@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test date input date input snapshot test  1`] = `
+<styled.div
+  data-test="component-date-input"
+>
+  <styled.p>
+    Test Label
+  </styled.p>
+  <ButtonSelection
+    backgroundColor="#E1E8ED"
+    disabled={false}
+    handleClick={[Function]}
+  >
+    <img
+      src="iconTest"
+    />
+  </ButtonSelection>
+  <styled.span
+    className="dateDisplay"
+  >
+    <styled.span
+      className="month"
+    >
+      October
+    </styled.span>
+    <styled.span
+      className="year"
+    >
+      2020
+    </styled.span>
+  </styled.span>
+  <ButtonSelection
+    backgroundColor="#E1E8ED"
+    handleClick={[Function]}
+  >
+    <img
+      src="iconTest"
+    />
+  </ButtonSelection>
+</styled.div>
+`;

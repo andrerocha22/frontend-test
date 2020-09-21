@@ -10,5 +10,5 @@
     "checkJs": false,
     "esModuleInterop": true
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*", "globals.d.ts"]
 }

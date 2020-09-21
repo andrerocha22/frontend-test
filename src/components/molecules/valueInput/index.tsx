@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { InputText } from '../../atoms/input';
+import { InputCurrency } from '../../atoms/input';
 import { LabelText } from '../../atoms/typography';
 
 interface ValueInputProps {
@@ -23,7 +23,7 @@ const ValueInputContainer = ({
   return (
     <Container data-test="component-value-input">
       <LabelText>{label}</LabelText>
-      <InputText icon={icon} backgroundColor={iconBackgroundColor} />
+      <InputCurrency icon={icon} backgroundColor={iconBackgroundColor} />
     </Container>
   );
 };

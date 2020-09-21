@@ -8,24 +8,56 @@ interface ButtonStyledProps {
   backgroundColor?: string;
   borderRadius?: string;
   isActive?: boolean;
+  disabled?: boolean;
 }
 
-const ButtonConfirm = styled.button<ButtonStyledProps>`
+const PrimaryButton = styled.button<ButtonStyledProps>`
   border: none;
   padding: 1.6rem 16rem;
-  color: ${props => props.color};
-  background-color: ${props => props.backgroundColor};
-  border-radius: ${props => props.borderRadius};
+  color: ${(props) => props.color};
+  background-color: ${(props) => props.backgroundColor};
+  border-radius: ${(props) => props.borderRadius};
 `;
+
+const SelectionButton = styled.button<ButtonStyledProps>`
+  border: none;
+  padding: 2rem;
+  color: ${(props) => props.color};
+  background-color: ${(props) => props.backgroundColor};
+  border-radius: ${(props) => props.borderRadius};
+`;
+
+// const keyHandler = e => {
+//   if (e.key === 'ArrowRight') {
+//     handleForward();
+//   }
+//   if (e.key === 'ArrowLeft') {
+//     year === currentYear && month === minMonth ? null : handleBackward();
+//   }
+// };
 
 export function ButtonPrimary(props: ButtonStyledProps) {
   return (
-    <ButtonConfirm
+    <PrimaryButton
       {...props}
       onClick={props.handleClick}
-      data-test="component-button"
+      data-test="component-button-primary"
+      disabled={props.disabled}
     >
       {props.children}
-    </ButtonConfirm>
+    </PrimaryButton>
+  );
+}
+
+export function ButtonSelection(props: ButtonStyledProps) {
+  return (
+    <SelectionButton
+      {...props}
+      onClick={props.handleClick}
+      data-test="component-button-selection"
+      disabled={props.disabled}
+    >
+      {props.children}
+    </SelectionButton>
   );
 }
