@@ -6,9 +6,9 @@ exports[`test date input date input snapshot test  1`] = `
 >
   <ButtonSelection
     backgroundColor="#E1E8ED"
-    data-test="component-button-backward"
     disabled={false}
     handleClick={[Function]}
+    onKeyUp={[Function]}
   >
     <img
       src="iconTest"
@@ -32,8 +32,8 @@ exports[`test date input date input snapshot test  1`] = `
   </styled.span>
   <ButtonSelection
     backgroundColor="#E1E8ED"
-    data-test="component-button-forward"
     handleClick={[Function]}
+    onKeyUp={[Function]}
   >
     <img
       src="iconTest"

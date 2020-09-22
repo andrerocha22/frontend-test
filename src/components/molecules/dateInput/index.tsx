@@ -103,20 +103,20 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
     diffCallback(diff);
   };
 
-  // const keyHandler = (e) => {
-  //   if (e.key === 'ArrowRight') {
-  //     handleForward();
-  //   }
-  //   if (e.key === 'ArrowLeft') {
-  //     year === currentYear && month === minMonth ? null : handleBackward();
-  //   }
-  // };
+  const keyHandler = (e: React.KeyboardEvent<HTMLButtonElement>) => {
+    if (e.key === 'ArrowRight') {
+      handleForward();
+    }
+    if (e.key === 'ArrowLeft') {
+      handleBackward();
+    }
+  };
 
   return (
     <DateInputContainer data-test="component-date-input">
       <ButtonSelection
-        data-test="component-button-backward"
         handleClick={handleBackward}
+        onKeyUp={keyHandler}
         backgroundColor="#E1E8ED"
         disabled={
           selectedYear === currentYear && months[selectedMonth] === minMonth
@@ -141,7 +141,7 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
         </DateSelectionSecondaryText>
       </DateDisplay>
       <ButtonSelection
-        data-test="component-button-forward"
+        onKeyUp={keyHandler}
         handleClick={handleForward}
         backgroundColor="#E1E8ED"
       >

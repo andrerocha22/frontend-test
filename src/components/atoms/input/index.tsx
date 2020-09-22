@@ -60,9 +60,9 @@ export function InputCurrency(props: InputProps) {
             fontSize: '2rem',
             lineHeight: '2.4rem',
           }}
-          onChangeEvent={(value: string) => {
-            setAmount(value);
-            props.onChangeCallback(value);
+          onChangeEvent={(e: any) => {
+            setAmount(e.target.value);
+            props.onChangeCallback(e.target.value);
           }}
           maxLength="12"
           value={amount}

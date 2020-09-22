@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { InputCurrency } from '../../atoms/input';
 import { LabelText } from '../../atoms/typography';
@@ -8,6 +8,10 @@ const arrowIconLeft = require('../../../assets/icons/arrow-left.svg') as string;
 const arrowIconRight = require('../../../assets/icons/arrow-right.svg') as string;
 const $Icon = require('../../../assets/icons/$.svg') as string;
 
+interface CalculatorInputsProps {
+  callback: (months: number, depositValue: string, amount: string) => void;
+}
+
 const CalculatorContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -15,6 +19,12 @@ const CalculatorContainer = styled.div`
   grid-auto-flow: column;
   width: 100%;
   margin-top: 4rem;
+
+  @media all and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const InputsContainer = styled.div`
@@ -23,17 +33,30 @@ const InputsContainer = styled.div`
   width: 100%;
 `;
 
-const AmountDateInputs: React.FC = () => {
-  const handleMonthDiff = (diff: number) => {
-    console.log(diff);
+const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
+  const [numberOfDeposits, setNumberOfDeposits] = useState<number>(1);
+  const [amount, setAmount] = useState<string>('0');
+
+  const depositValue = () => {
+    const valueToString = amount.toString().replace(/,/g, '');
+    const depositValue = Number(valueToString) / numberOfDeposits;
+    return depositValue.toFixed(2);
   };
 
-  const handleAmountInput = (amount: any) => {
-    console.log(amount);
+  useEffect(() => {
+    callback(numberOfDeposits, depositValue(), amount);
+  }, [amount, numberOfDeposits]);
+
+  const handleMonthDiff = (numberOfMonthlyDeposits: number) => {
+    setNumberOfDeposits(numberOfMonthlyDeposits);
+  };
+
+  const handleAmountInput = (amount: string) => {
+    setAmount(amount);
   };
 
   return (
-    <CalculatorContainer>
+    <CalculatorContainer data-test="component-calculator-input">
       <InputsContainer>
         <LabelText>Total Amount</LabelText>
         <InputCurrency
@@ -54,4 +77,4 @@ const AmountDateInputs: React.FC = () => {
   );
 };
 
-export default AmountDateInputs;
+export default CalculatorInputs;

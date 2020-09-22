@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test calculator input calculator input snapshot test  1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1.6rem;
+  grid-auto-flow: column;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+@media all and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+<div
+  className="c0"
+  data-test="component-calculator-input"
+>
+  <styled.div>
+    <styled.p>
+      Total Amount
+    </styled.p>
+    <InputCurrency
+      backgroundColor="#F4F8FA"
+      icon="test-file-stub"
+      onChangeCallback={[Function]}
+    />
+  </styled.div>
+  <styled.div>
+    <styled.p>
+      Reach goal by
+    </styled.p>
+    <DateInput
+      diffCallback={[Function]}
+      iconSrcLeft="test-file-stub"
+      iconSrcRight="test-file-stub"
+    />
+  </styled.div>
+</div>
+`;

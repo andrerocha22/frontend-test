@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 interface ButtonStyledProps {
   handleClick: (event: React.MouseEvent<HTMLElement>) => void;
+  onKeyUp?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
   color?: string;
   backgroundColor?: string;
@@ -27,15 +28,6 @@ const SelectionButton = styled.button<ButtonStyledProps>`
   border-radius: ${(props) => props.borderRadius};
 `;
 
-// const keyHandler = e => {
-//   if (e.key === 'ArrowRight') {
-//     handleForward();
-//   }
-//   if (e.key === 'ArrowLeft') {
-//     year === currentYear && month === minMonth ? null : handleBackward();
-//   }
-// };
-
 export function ButtonPrimary(props: ButtonStyledProps) {
   return (
     <PrimaryButton
@@ -43,6 +35,7 @@ export function ButtonPrimary(props: ButtonStyledProps) {
       onClick={props.handleClick}
       data-test="component-button-primary"
       disabled={props.disabled}
+      onKeyUp={props.onKeyUp}
     >
       {props.children}
     </PrimaryButton>
@@ -56,6 +49,7 @@ export function ButtonSelection(props: ButtonStyledProps) {
       onClick={props.handleClick}
       data-test="component-button-selection"
       disabled={props.disabled}
+      onKeyUp={props.onKeyUp}
     >
       {props.children}
     </SelectionButton>

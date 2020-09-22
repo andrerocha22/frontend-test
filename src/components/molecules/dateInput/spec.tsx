@@ -46,43 +46,13 @@ describe('test date input', () => {
     const wrapper = setupMount();
     expect(wrapper.prop('iconSrcRight')).toEqual(defaultProps.iconSrcRight);
   });
-});
 
-describe('test if child components renders correctly', () => {
-  const setup = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return shallow(
-      <DateInput diffCallback={mockCallback} {...setupProps} />
-    ).dive();
-  };
+  // test('date input test props', () => {
+  //   const wrapper = setupMount();
+  //   const buttonForward = wrapper.find('button');
+  //   buttonForward.simulate('click');
+  //   const spy = jest.spyOn(DateInput.propTypes, "")
 
-  test('renders backward button', () => {
-    const wrapper = setup();
-    const buttonBackward = findByTestAttr(wrapper, 'component-button-backward');
-    expect(buttonBackward.length).toBe(1);
-  });
-
-  test('renders forward button', () => {
-    const wrapper = setup();
-    const buttonForward = findByTestAttr(wrapper, 'component-button-forward');
-    expect(buttonForward.length).toBe(1);
-  });
-
-  test('renders date display', () => {
-    const wrapper = setup();
-    const dateDisplay = findByTestAttr(wrapper, 'component-date-display');
-    expect(dateDisplay.length).toBe(1);
-  });
-
-  test('renders month text', () => {
-    const wrapper = setup();
-    const monthText = findByTestAttr(wrapper, 'component-month-text');
-    expect(monthText.length).toBe(1);
-  });
-
-  test('renders year text', () => {
-    const wrapper = setup();
-    const yearText = findByTestAttr(wrapper, 'component-year-text');
-    expect(yearText.length).toBe(1);
-  });
+  //   expect(wrapper.)
+  // });
 });
