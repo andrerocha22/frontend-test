@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { ButtonPrimary } from './components/atoms/button';
-import icon$ from './assets/icons/$.svg';
-const arrowIcon = require('./assets/icons/arrow.svg') as string;
 import Card from './components/atoms/card';
 import {
   TitleText,
@@ -9,8 +7,8 @@ import {
   SecondaryText,
   PrimaryText,
 } from './components/atoms/typography';
-import ValueInputContainer from './components/molecules/valueInput';
-import DateInput from './components/molecules/dateInput';
+
+import AmountDateInputs from './components/organisms/amountDateInputs';
 
 const App: React.FunctionComponent = () => {
   return (
@@ -23,6 +21,7 @@ const App: React.FunctionComponent = () => {
         padding: '40px',
       }}
     >
+
       <TitleText>
         Let's plan your <BoldText>saving goal</BoldText>.
       </TitleText>
@@ -38,11 +37,7 @@ const App: React.FunctionComponent = () => {
           marginBottom: '25px',
         }}
       />
-      <ValueInputContainer
-        icon={icon$}
-        iconBackgroundColor="#F4F8FA"
-        label="Total amount"
-      />
+      <AmountDateInputs />
       <div
         style={{
           marginBottom: '25px',
@@ -52,10 +47,6 @@ const App: React.FunctionComponent = () => {
         style={{
           marginBottom: '25px',
         }}
-      />
-      <DateInput
-        label="Reach goal by"
-        iconSrc={arrowIcon}
       />
       <div
         style={{

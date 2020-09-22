@@ -4,11 +4,9 @@ exports[`test date input date input snapshot test  1`] = `
 <styled.div
   data-test="component-date-input"
 >
-  <styled.p>
-    Test Label
-  </styled.p>
   <ButtonSelection
     backgroundColor="#E1E8ED"
+    data-test="component-button-backward"
     disabled={false}
     handleClick={[Function]}
   >
@@ -17,21 +15,24 @@ exports[`test date input date input snapshot test  1`] = `
     />
   </ButtonSelection>
   <styled.span
-    className="dateDisplay"
+    data-test="component-date-display"
   >
     <styled.span
       className="month"
+      data-test="component-month-text"
     >
       October
     </styled.span>
     <styled.span
       className="year"
+      data-test="component-year-text"
     >
       2020
     </styled.span>
   </styled.span>
   <ButtonSelection
     backgroundColor="#E1E8ED"
+    data-test="component-button-forward"
     handleClick={[Function]}
   >
     <img

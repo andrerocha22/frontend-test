@@ -1,10 +1,15 @@
-import React, { ReactNode } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import CurrencyInput from 'react-currency-input';
 
 interface InputProps {
   icon?: string;
+  backgroundColor?: string;
+  onChangeCallback: (amount: string) => void;
+}
+
+interface IconProps {
   backgroundColor?: string;
 }
 
@@ -14,11 +19,12 @@ const InputContainer = styled.div`
   width: 100%;
 `;
 
-const IconContainer = styled.img<InputProps>`
+const IconContainer = styled.img<IconProps>`
   width: 56px;
   height: 56px;
   padding: 1.6rem;
   background-color: ${(props) => props.backgroundColor};
+  border-right: 1px solid #e1e8ed;
 `;
 
 const Input = styled.div`
@@ -33,11 +39,11 @@ const Input = styled.div`
 `;
 
 export function InputCurrency(props: InputProps) {
+  const [amount, setAmount] = useState<string>();
   if (props.icon) {
     return (
       <InputContainer data-test="component-value-input">
         <IconContainer
-          {...props}
           src={props.icon}
           data-test="component-value-input-icon"
         />
@@ -54,11 +60,12 @@ export function InputCurrency(props: InputProps) {
             fontSize: '2rem',
             lineHeight: '2.4rem',
           }}
-          // onChangeEvent={(e) => {
-          //   handleChange(e.target.value);
-          // }}
+          onChangeEvent={(value: string) => {
+            setAmount(value);
+            props.onChangeCallback(value);
+          }}
           maxLength="12"
-          // value={amount}
+          value={amount}
           decimalSeparator="."
           thousandSeparator=","
           selectAllOnFocus
@@ -70,7 +77,29 @@ export function InputCurrency(props: InputProps) {
   {
     return (
       <InputContainer data-test="component-value-input">
-        <Input />
+        <CurrencyInput
+          className="inputAmount"
+          style={{
+            display: 'flex',
+            width: '100%',
+            background: '#ffffff',
+            border: 'none',
+            padding: '1.6rem',
+            fontWeight: '600',
+            fontSize: '2rem',
+            lineHeight: '2.4rem',
+          }}
+          onChangeEvent={(e: any) => {
+            setAmount(e.target.value);
+            props.onChangeCallback(e.target.value);
+          }}
+          maxLength="12"
+          value={amount}
+          decimalSeparator="."
+          thousandSeparator=","
+          selectAllOnFocus
+          autoFocus
+        />
       </InputContainer>
     );
   }

@@ -5,12 +5,12 @@ import { ButtonSelection } from '../../atoms/button';
 import {
   DateSelectionPrimaryText,
   DateSelectionSecondaryText,
-  LabelText,
 } from '../../atoms/typography';
 
 interface DateInputProps {
-  label: string;
-  iconSrc: string;
+  iconSrcLeft: string;
+  iconSrcRight: string;
+  diffCallback: (df: number) => void;
 }
 
 const months = [
@@ -50,7 +50,11 @@ const DateDisplay = styled.span`
   background-color: #ffffff;
 `;
 
-const DateInput = ({ label, iconSrc }: DateInputProps) => {
+const DateInput: React.FunctionComponent<DateInputProps> = ({
+  iconSrcLeft,
+  iconSrcRight,
+  diffCallback,
+}) => {
   const [selectedMonth, setSelectedMonth] = useState<number>(
     months.indexOf(currentMonth) + 1
   );
@@ -62,18 +66,9 @@ const DateInput = ({ label, iconSrc }: DateInputProps) => {
   }, []);
 
   const handleForward = () => {
-    // const diff = MonthDiff(
-    //   new Date(currentYear, months.indexOf(currentMonth)),
-    //   new Date(selectedYear, selectedMonth)
-    // );
-
     if (selectedMonth === months.indexOf('December')) {
       const nextYear = selectedYear + 1;
       setSelectedYear(nextYear);
-
-      // rootDispatcher.updateDeposit(
-      //   monthDiff(nextYear, months.indexOf('January'))
-      // );
 
       setSelectedMonth(months.indexOf('January'));
     } else {
@@ -81,6 +76,12 @@ const DateInput = ({ label, iconSrc }: DateInputProps) => {
 
       setSelectedMonth(newMonthIndex);
     }
+
+    const diff = MonthDiff(
+      new Date(currentYear, months.indexOf(currentMonth)),
+      new Date(selectedYear, selectedMonth + 1)
+    );
+    diffCallback(diff);
   };
 
   const handleBackward = () => {
@@ -88,16 +89,18 @@ const DateInput = ({ label, iconSrc }: DateInputProps) => {
       const previousYear = selectedYear - 1;
       setSelectedYear(previousYear);
 
-      // rootDispatcher.updateDeposit(
-      //   monthDiff(previousYear, months.indexOf('December'))
-      // );
-
       setSelectedMonth(months.indexOf('December'));
     } else {
       const previousMonthIndex = selectedMonth - 1;
 
       setSelectedMonth(previousMonthIndex);
     }
+
+    const diff = MonthDiff(
+      new Date(currentYear, months.indexOf(currentMonth)),
+      new Date(selectedYear, selectedMonth - 1)
+    );
+    diffCallback(diff);
   };
 
   // const keyHandler = (e) => {
@@ -110,33 +113,41 @@ const DateInput = ({ label, iconSrc }: DateInputProps) => {
   // };
 
   return (
-    <>
-      <DateInputContainer data-test="component-date-input">
-        <LabelText>{label}</LabelText>
-        <ButtonSelection
-          handleClick={handleBackward}
-          backgroundColor="#E1E8ED"
-          disabled={
-            selectedYear === currentYear && months[selectedMonth] === minMonth
-              ? true
-              : false
-          }
+    <DateInputContainer data-test="component-date-input">
+      <ButtonSelection
+        data-test="component-button-backward"
+        handleClick={handleBackward}
+        backgroundColor="#E1E8ED"
+        disabled={
+          selectedYear === currentYear && months[selectedMonth] === minMonth
+            ? true
+            : false
+        }
+      >
+        <img src={iconSrcLeft} />
+      </ButtonSelection>
+      <DateDisplay data-test="component-date-display">
+        <DateSelectionPrimaryText
+          className="month"
+          data-test="component-month-text"
         >
-          <img src={iconSrc} />
-        </ButtonSelection>
-        <DateDisplay className="dateDisplay">
-          <DateSelectionPrimaryText className="month">
-            {months[selectedMonth]}
-          </DateSelectionPrimaryText>
-          <DateSelectionSecondaryText className="year">
-            {selectedYear}
-          </DateSelectionSecondaryText>
-        </DateDisplay>
-        <ButtonSelection handleClick={handleForward} backgroundColor="#E1E8ED">
-          <img src={iconSrc} />
-        </ButtonSelection>
-      </DateInputContainer>
-    </>
+          {months[selectedMonth]}
+        </DateSelectionPrimaryText>
+        <DateSelectionSecondaryText
+          className="year"
+          data-test="component-year-text"
+        >
+          {selectedYear}
+        </DateSelectionSecondaryText>
+      </DateDisplay>
+      <ButtonSelection
+        data-test="component-button-forward"
+        handleClick={handleForward}
+        backgroundColor="#E1E8ED"
+      >
+        <img src={iconSrcRight} />
+      </ButtonSelection>
+    </DateInputContainer>
   );
 };
 
