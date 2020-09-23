@@ -1,27 +1,17 @@
 import React from 'react';
-import styled from 'styled-components';
+import { IconImg } from './styles';
 
-interface IconProps {
-  handleClick?: (event: React.MouseEvent<HTMLElement>) => void;
-  color?: string;
-  backgroundColor?: string;
+export interface IconProps {
+  clickCallback?: (event: React.MouseEvent<HTMLElement>) => void;
   src: string;
 }
 
-const IconImg = styled.img<IconProps>`
-  align-self: flex-start;
-  justify-self: center;
-  width: 4rem;
-  color: ${(props) => props.color};
-  background-color: ${(props) => props.backgroundColor};
-`;
-
-export function Icon(props: IconProps) {
+export const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
     <IconImg
       {...props}
-      onClick={props.handleClick}
+      onClick={props.clickCallback}
       data-test="component-icon"
     />
   );
-}
+};

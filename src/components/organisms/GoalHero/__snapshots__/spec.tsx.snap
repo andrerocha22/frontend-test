@@ -23,7 +23,7 @@ exports[`test goal hero goal hero snapshot test  1`] = `
   className="c0"
   data-test="component-goal-hero"
 >
-  <Icon
+  <Component
     src="icon-src"
   />
   <styled.p>

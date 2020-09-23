@@ -1,41 +1,30 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import React, { useState, useEffect, useCallback } from 'react';
 import { InputCurrency } from '../../atoms/input';
 import { LabelText } from '../../atoms/typography';
 import DateInput from '../../molecules/dateInput';
-const arrowIconLeft = require('../../../assets/icons/arrow-left.svg') as string;
-const arrowIconRight = require('../../../assets/icons/arrow-right.svg') as string;
-const $Icon = require('../../../assets/icons/$.svg') as string;
+
+import { CalculatorContainer, InputsContainer } from './styles';
+
+import arrowIconLeft from '../../../assets/icons/arrow-left.svg';
+import arrowIconRight from '../../../assets/icons/arrow-right.svg';
+import DollarSignIcon from '../../../assets/icons/dollar-sign.svg';
 
 interface CalculatorInputsProps {
-  callback: (months: number, depositValue: string, amount: string) => void;
+  callback: (
+    months: number,
+    depositValue: string,
+    amount: string,
+    month: string,
+    year: string
+  ) => unknown;
 }
-
-const CalculatorContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.6rem;
-  grid-auto-flow: column;
-  width: 100%;
-  margin-top: 4rem;
-
-  @media all and (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-`;
-
-const InputsContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-`;
 
 const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
   const [numberOfDeposits, setNumberOfDeposits] = useState<number>(1);
   const [amount, setAmount] = useState<string>('0');
+  const [year, setYear] = useState<string>('');
+  const [month, setMonth] = useState<string>('');
 
   const depositValue = () => {
     const valueToString = amount.toString().replace(/,/g, '');
@@ -43,12 +32,22 @@ const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
     return depositValue.toFixed(2);
   };
 
-  useEffect(() => {
-    callback(numberOfDeposits, depositValue(), amount);
-  }, [amount, numberOfDeposits]);
+  const memoizedCallback = useCallback(() => {
+    callback(numberOfDeposits, depositValue(), amount, month, year);
+  }, [amount, month, numberOfDeposits, year]);
 
-  const handleMonthDiff = (numberOfMonthlyDeposits: number) => {
+  useEffect(() => {
+    memoizedCallback();
+  }, [amount, month, year]);
+
+  const handleMonthDiff = (
+    numberOfMonthlyDeposits: number,
+    month: string,
+    year: string
+  ) => {
     setNumberOfDeposits(numberOfMonthlyDeposits);
+    setMonth(month);
+    setYear(year);
   };
 
   const handleAmountInput = (amount: string) => {
@@ -60,8 +59,7 @@ const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
       <InputsContainer>
         <LabelText>Total Amount</LabelText>
         <InputCurrency
-          icon={$Icon}
-          backgroundColor={'#F4F8FA'}
+          icon={DollarSignIcon}
           onChangeCallback={handleAmountInput}
         />
       </InputsContainer>
@@ -70,7 +68,7 @@ const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
         <DateInput
           iconSrcRight={arrowIconRight}
           iconSrcLeft={arrowIconLeft}
-          diffCallback={handleMonthDiff}
+          differenceDatesCallback={handleMonthDiff}
         />
       </InputsContainer>
     </CalculatorContainer>

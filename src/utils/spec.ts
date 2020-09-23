@@ -1,4 +1,4 @@
-import MonthDiff from './DiffBetweenMonths';
+import MonthDiff from './differenceBetweenMonths';
 
 test('should return the correct difference between dates', () => {
   const dateFrom = new Date(2020, 1);

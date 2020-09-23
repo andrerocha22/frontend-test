@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test currency input currency input snapshot test 1`] = `
+<styled.div
+  data-test="component-currency-input"
+>
+  <CurrencyInput
+    allowNegative={false}
+    autoFocus={true}
+    className="inputAmount"
+    decimalSeparator="."
+    inputType="text"
+    maxLength="12"
+    onChange={[Function]}
+    onChangeEvent={[Function]}
+    precision="2"
+    prefix=""
+    selectAllOnFocus={true}
+    style={
+      Object {
+        "background": "#ffffff",
+        "border": "none",
+        "display": "flex",
+        "fontSize": "2rem",
+        "fontWeight": "600",
+        "lineHeight": "2.4rem",
+        "padding": "1.6rem",
+        "width": "100%",
+      }
+    }
+    suffix=""
+    thousandSeparator=","
+    value="0"
+  />
+</styled.div>
+`;

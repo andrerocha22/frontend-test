@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test icon card snapshot test  1`] = `
+<styled.img
+  backgroundColor="#000000"
+  clickCallback={[MockFunction]}
+  color="#ffffff"
+  data-test="component-icon"
+  onClick={[MockFunction]}
+  src="iconTest"
+/>
+`;

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import MonthDiff from '../../../utils/DiffBetweenMonths';
+import MonthDiff from '../../../utils/differenceBetweenMonths';
 import { ButtonSelection } from '../../atoms/button';
 import {
   DateSelectionPrimaryText,
   DateSelectionSecondaryText,
 } from '../../atoms/typography';
 
+import { DateInputContainer, DateDisplay } from './styles';
+
 interface DateInputProps {
   iconSrcLeft: string;
   iconSrcRight: string;
-  diffCallback: (df: number) => void;
+  differenceDatesCallback: (df: number, mth: string, yr: string) => void;
 }
 
 const months = [
@@ -31,29 +32,10 @@ const months = [
 const currentMonth = new Date().toLocaleString('en-US', { month: 'long' });
 const currentYear = new Date().getFullYear();
 
-const DateInputContainer = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-
-  border: 1px solid #e1e8ed;
-  border-radius: 4px;
-`;
-
-const DateDisplay = styled.span`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #ffffff;
-`;
-
 const DateInput: React.FunctionComponent<DateInputProps> = ({
   iconSrcLeft,
   iconSrcRight,
-  diffCallback,
+  differenceDatesCallback,
 }) => {
   const [selectedMonth, setSelectedMonth] = useState<number>(
     months.indexOf(currentMonth) + 1
@@ -63,6 +45,11 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
 
   useEffect(() => {
     setMinMonth(months[months.indexOf(currentMonth) + 1]);
+    differenceDatesCallback(
+      1,
+      months[selectedMonth],
+      selectedYear.toString(10)
+    );
   }, []);
 
   const handleForward = () => {
@@ -71,17 +58,28 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
       setSelectedYear(nextYear);
 
       setSelectedMonth(months.indexOf('January'));
+
+      const diff = MonthDiff(
+        new Date(currentYear, months.indexOf(currentMonth)),
+        new Date(selectedYear, selectedMonth + 1)
+      );
+      differenceDatesCallback(diff, months[0], nextYear.toString(10));
     } else {
       const newMonthIndex = selectedMonth + 1;
 
       setSelectedMonth(newMonthIndex);
-    }
 
-    const diff = MonthDiff(
-      new Date(currentYear, months.indexOf(currentMonth)),
-      new Date(selectedYear, selectedMonth + 1)
-    );
-    diffCallback(diff);
+      const diff = MonthDiff(
+        new Date(currentYear, months.indexOf(currentMonth)),
+        new Date(selectedYear, selectedMonth + 1)
+      );
+
+      differenceDatesCallback(
+        diff,
+        months[selectedMonth + 1],
+        selectedYear.toString(10)
+      );
+    }
   };
 
   const handleBackward = () => {
@@ -90,17 +88,28 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
       setSelectedYear(previousYear);
 
       setSelectedMonth(months.indexOf('December'));
+
+      const diff = MonthDiff(
+        new Date(currentYear, months.indexOf(currentMonth)),
+        new Date(selectedYear, selectedMonth + 1)
+      );
+      differenceDatesCallback(diff, months[11], previousYear.toString(10));
     } else {
       const previousMonthIndex = selectedMonth - 1;
 
       setSelectedMonth(previousMonthIndex);
-    }
 
-    const diff = MonthDiff(
-      new Date(currentYear, months.indexOf(currentMonth)),
-      new Date(selectedYear, selectedMonth - 1)
-    );
-    diffCallback(diff);
+      const diff = MonthDiff(
+        new Date(currentYear, months.indexOf(currentMonth)),
+        new Date(selectedYear, selectedMonth - 1)
+      );
+
+      differenceDatesCallback(
+        diff,
+        months[selectedMonth - 1],
+        selectedYear.toString(10)
+      );
+    }
   };
 
   const keyHandler = (e: React.KeyboardEvent<HTMLButtonElement>) => {
@@ -108,7 +117,9 @@ const DateInput: React.FunctionComponent<DateInputProps> = ({
       handleForward();
     }
     if (e.key === 'ArrowLeft') {
-      handleBackward();
+      selectedYear === currentYear && months[selectedMonth] === minMonth
+        ? null
+        : handleBackward();
     }
   };
 

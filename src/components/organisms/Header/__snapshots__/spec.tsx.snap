@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component goal hero snapshot test  1`] = `
+<header
+  className="sc-bdnylx jiINeO"
+  data-test="component-header"
+>
+  <a
+    href="/"
+  >
+    <styled.img
+      alt="Logo-Origin"
+      className="logoIMG"
+      src="test-file-stub"
+    />
+  </a>
+</header>
+`;

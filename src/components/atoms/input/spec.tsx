@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow, ShallowWrapper, mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { findByTestAttr } from '../../../test/testUtils';
 import { InputCurrency } from './index';
 
@@ -7,7 +7,6 @@ const mockCallBack = jest.fn();
 
 const defaultProps = {
   icon: 'iconTest',
-  backgroundColor: '#F4F8FA',
 };
 
 const setup = (props = {}) => {
@@ -17,17 +16,32 @@ const setup = (props = {}) => {
   );
 };
 
-describe('Test value input', () => {
+describe('Test currency input', () => {
   test('renders without error', () => {
     const wrapper = setup();
-    const component = findByTestAttr(wrapper, 'component-value-input');
+    const component = findByTestAttr(wrapper, 'component-currency-input');
     expect(component.length).toBe(1);
   });
 
-  test('renders without error with bcon and backgroundColor props', () => {
+  test('renders without error with icon props', () => {
     const wrapper = setup(defaultProps);
-    const component = findByTestAttr(wrapper, 'component-value-input');
+    const component = findByTestAttr(
+      wrapper,
+      'component-currency-input-with-icon'
+    );
     expect(component.length).toBe(1);
+  });
+
+  test('not renders icon without icon props', () => {
+    const wrapper = setup();
+    const component = findByTestAttr(wrapper, 'component-currency-input-icon');
+    expect(component.length).toBe(0);
+  });
+
+  test('currency input snapshot test', () => {
+    const wrapper = setup();
+    const component = findByTestAttr(wrapper, 'component-currency-input');
+    expect(component).toMatchSnapshot();
   });
 
   test('test callback', () => {

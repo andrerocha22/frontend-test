@@ -7,7 +7,6 @@ exports[`test calculator input calculator input snapshot test  1`] = `
   grid-gap: 1.6rem;
   grid-auto-flow: column;
   width: 100%;
-  margin-top: 4rem;
 }
 
 @media all and (max-width:768px) {
@@ -31,8 +30,7 @@ exports[`test calculator input calculator input snapshot test  1`] = `
     <styled.p>
       Total Amount
     </styled.p>
-    <InputCurrency
-      backgroundColor="#F4F8FA"
+    <Component
       icon="test-file-stub"
       onChangeCallback={[Function]}
     />
@@ -42,7 +40,7 @@ exports[`test calculator input calculator input snapshot test  1`] = `
       Reach goal by
     </styled.p>
     <DateInput
-      diffCallback={[Function]}
+      differenceDatesCallback={[Function]}
       iconSrcLeft="test-file-stub"
       iconSrcRight="test-file-stub"
     />

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 interface CardProps {
   primaryInfo: string;
   amount: string;
-  secondaryInfo: string;
+  secondaryInfo: React.ReactNode;
 }
 
 const CardContainer = styled.article`
@@ -48,7 +48,7 @@ const SecondaryInfo = styled.p`
   font-size: 1.2rem;
   line-height: 1.6rem;
   padding: 3.2rem;
-  
+
   background-color: #f4f8fa;
   color: #1c1e1f;
 `;

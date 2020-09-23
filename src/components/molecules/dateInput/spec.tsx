@@ -15,12 +15,16 @@ const mockCallback = jest.fn();
 describe('test date input', () => {
   const setup = (props = {}) => {
     const setupProps = { ...defaultProps, ...props };
-    return shallow(<DateInput diffCallback={mockCallback} {...setupProps} />);
+    return shallow(
+      <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
+    );
   };
 
   const setupMount = (props = {}) => {
     const setupProps = { ...defaultProps, ...props };
-    return mount(<DateInput diffCallback={mockCallback} {...setupProps} />);
+    return mount(
+      <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
+    );
   };
 
   let component: ShallowWrapper = undefined;
@@ -31,7 +35,7 @@ describe('test date input', () => {
     expect(component.length).toBe(1);
   });
 
-  test('date input snapshot test ', () => {
+  test('date input snapshot test', () => {
     const wrapper = setup();
     component = findByTestAttr(wrapper, 'component-date-input');
     expect(component).toMatchSnapshot();

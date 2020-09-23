@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
-import styled from 'styled-components';
+import { PrimaryButton, SelectionButton } from './styles';
 
-interface ButtonStyledProps {
+export interface ButtonStyledProps {
   handleClick: (event: React.MouseEvent<HTMLElement>) => void;
   onKeyUp?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
   children?: ReactNode;
@@ -11,22 +11,6 @@ interface ButtonStyledProps {
   isActive?: boolean;
   disabled?: boolean;
 }
-
-const PrimaryButton = styled.button<ButtonStyledProps>`
-  border: none;
-  padding: 1.6rem 16rem;
-  color: ${(props) => props.color};
-  background-color: ${(props) => props.backgroundColor};
-  border-radius: ${(props) => props.borderRadius};
-`;
-
-const SelectionButton = styled.button<ButtonStyledProps>`
-  border: none;
-  padding: 2rem;
-  color: ${(props) => props.color};
-  background-color: ${(props) => props.backgroundColor};
-  border-radius: ${(props) => props.borderRadius};
-`;
 
 export function ButtonPrimary(props: ButtonStyledProps) {
   return (
