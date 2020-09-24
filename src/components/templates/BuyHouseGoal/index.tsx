@@ -12,6 +12,7 @@ import {
 } from './styles';
 
 import houseIcon from '../../../assets/icons/house.svg';
+import { BlockWhenMobile } from '../../atoms/typography';
 
 const BuyHouseGoal: React.FC = () => {
   const [months, setMonths] = useState<number>(0);
@@ -38,7 +39,14 @@ const BuyHouseGoal: React.FC = () => {
     alert('Confirmed');
   };
 
-  const SecondaryInfo = (
+  const primaryInfo = (
+    <>
+      Monthly
+      <BlockWhenMobile> Amount</BlockWhenMobile>
+    </>
+  );
+
+  const secondaryInfo = (
     <>
       You are plaining{' '}
       <strong>
@@ -63,9 +71,9 @@ const BuyHouseGoal: React.FC = () => {
       <CalculatorInputs callback={handleInputs} />
       <SpaceDiv31px />
       <Card
-        primaryInfo="Monthly Amount"
+        primaryInfo={primaryInfo}
         amount={`$${Number(depositValue).toFixed(0)}`}
-        secondaryInfo={SecondaryInfo}
+        secondaryInfo={secondaryInfo}
       />
       <SpaceDiv31px />
       <ConfirmeButtonContainer>
@@ -73,7 +81,7 @@ const BuyHouseGoal: React.FC = () => {
           handleClick={handleConfirmButton}
           color="#FFFFFF"
           backgroundColor="#1B31A8"
-          borderRadius="2rem"
+          borderRadius="3.2rem"
           disabled={depositValue === '0.00' ? true : false}
         >
           Confirm

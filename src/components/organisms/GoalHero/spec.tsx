@@ -11,17 +11,12 @@ const defaultProps = {
   iconSrc: 'icon-src',
 };
 
+const setup = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(<GoalHero {...setupProps} />).dive();
+};
+
 describe('test goal hero', () => {
-  const setup = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return shallow(<GoalHero {...setupProps} />).dive();
-  };
-
-  //   const setupMount = (props = {}) => {
-  //     const setupProps = { ...props };
-  //     return mount(<CalculatorInputs callback={mockCallback} {...setupProps} />);
-  //   };
-
   test('renders without error', () => {
     const wrapper = setup();
     const component = findByTestAttr(wrapper, 'component-goal-hero');

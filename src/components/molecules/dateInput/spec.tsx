@@ -12,21 +12,21 @@ const defaultProps = {
 
 const mockCallback = jest.fn();
 
+const setup = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(
+    <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
+  );
+};
+
+const setupMount = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  return mount(
+    <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
+  );
+};
+
 describe('test date input', () => {
-  const setup = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return shallow(
-      <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
-    );
-  };
-
-  const setupMount = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return mount(
-      <DateInput differenceDatesCallback={mockCallback} {...setupProps} />
-    );
-  };
-
   let component: ShallowWrapper = undefined;
 
   test('renders without error', () => {
@@ -50,13 +50,4 @@ describe('test date input', () => {
     const wrapper = setupMount();
     expect(wrapper.prop('iconSrcRight')).toEqual(defaultProps.iconSrcRight);
   });
-
-  // test('date input test props', () => {
-  //   const wrapper = setupMount();
-  //   const buttonForward = wrapper.find('button');
-  //   buttonForward.simulate('click');
-  //   const spy = jest.spyOn(DateInput.propTypes, "")
-
-  //   expect(wrapper.)
-  // });
 });

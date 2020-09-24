@@ -20,7 +20,9 @@ interface CalculatorInputsProps {
   ) => unknown;
 }
 
-const CalculatorInputs = ({ callback }: CalculatorInputsProps) => {
+const CalculatorInputs: React.FunctionComponent<CalculatorInputsProps> = ({
+  callback,
+}) => {
   const [numberOfDeposits, setNumberOfDeposits] = useState<number>(1);
   const [amount, setAmount] = useState<string>('0');
   const [year, setYear] = useState<string>('');

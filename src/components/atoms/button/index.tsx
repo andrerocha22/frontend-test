@@ -12,7 +12,9 @@ export interface ButtonStyledProps {
   disabled?: boolean;
 }
 
-export function ButtonPrimary(props: ButtonStyledProps) {
+export const ButtonPrimary: React.FunctionComponent<ButtonStyledProps> = (
+  props
+) => {
   return (
     <PrimaryButton
       {...props}
@@ -24,9 +26,11 @@ export function ButtonPrimary(props: ButtonStyledProps) {
       {props.children}
     </PrimaryButton>
   );
-}
+};
 
-export function ButtonSelection(props: ButtonStyledProps) {
+export const ButtonSelection: React.FunctionComponent<ButtonStyledProps> = (
+  props
+) => {
   return (
     <SelectionButton
       {...props}
@@ -38,4 +42,4 @@ export function ButtonSelection(props: ButtonStyledProps) {
       {props.children}
     </SelectionButton>
   );
-}
+};

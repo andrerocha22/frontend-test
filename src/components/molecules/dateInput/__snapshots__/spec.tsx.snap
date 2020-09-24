@@ -4,7 +4,7 @@ exports[`test date input date input snapshot test 1`] = `
 <styled.div
   data-test="component-date-input"
 >
-  <ButtonSelection
+  <Component
     backgroundColor="#E1E8ED"
     disabled={false}
     handleClick={[Function]}
@@ -13,7 +13,7 @@ exports[`test date input date input snapshot test 1`] = `
     <img
       src="iconTest"
     />
-  </ButtonSelection>
+  </Component>
   <styled.span
     data-test="component-date-display"
   >
@@ -30,7 +30,7 @@ exports[`test date input date input snapshot test 1`] = `
       2020
     </styled.span>
   </styled.span>
-  <ButtonSelection
+  <Component
     backgroundColor="#E1E8ED"
     handleClick={[Function]}
     onKeyUp={[Function]}
@@ -38,6 +38,6 @@ exports[`test date input date input snapshot test 1`] = `
     <img
       src="iconTest"
     />
-  </ButtonSelection>
+  </Component>
 </styled.div>
 `;

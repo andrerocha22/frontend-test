@@ -9,12 +9,9 @@ export const Container = styled.div`
   align-self: center;
   background-color: #f4f8fa;
 
-  margin-top: 13.3rem;
-  min-height: calc(100% - 13.3rem);
-`;
+  min-height: calc(100% - 7.9rem);
 
-export const SpaceDiv40px = styled.div`
-  display: flex;
-  width: 100%;
-  margin-top: 4rem;
+  @media all and (max-width: 768px) {
+    margin-top: 7.9rem;
+  }
 `;

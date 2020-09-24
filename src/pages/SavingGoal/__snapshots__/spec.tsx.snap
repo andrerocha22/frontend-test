@@ -1,0 +1,847 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test calculator input calculator input snapshot test  1`] = `
+.c1 {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 400;
+  text-align: center;
+  -webkit-letter-spacing: -0.2px;
+  -moz-letter-spacing: -0.2px;
+  -ms-letter-spacing: -0.2px;
+  letter-spacing: -0.2px;
+  color: #1b31a8;
+  margin-bottom: 40px;
+}
+
+.c11 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 3rem;
+  color: #1c1e1f;
+}
+
+.c6 {
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  -webkit-letter-spacing: -0.266667px;
+  -moz-letter-spacing: -0.266667px;
+  -ms-letter-spacing: -0.266667px;
+  letter-spacing: -0.266667px;
+  color: #1c1e1f;
+}
+
+.c7 {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  color: #657786;
+}
+
+.c2 {
+  font-weight: 600 !important;
+}
+
+.c17 {
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  text-align: center;
+  -webkit-letter-spacing: -0.16px;
+  -moz-letter-spacing: -0.16px;
+  -ms-letter-spacing: -0.16px;
+  letter-spacing: -0.16px;
+  color: #1c1e1f;
+}
+
+.c18 {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1c1e1f;
+}
+
+.c12 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #e1e8ed;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.c13 {
+  min-width: 56px;
+  height: 56px;
+  padding: 1.7rem;
+  background-color: #f4f8fa;
+  border-right: 1px solid #e1e8ed;
+}
+
+.c27 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  border: none;
+  padding: 1.6rem 16rem;
+  min-width: 400px;
+  color: #FFFFFF;
+  background-color: #1B31A8;
+  border-radius: 3.2rem;
+}
+
+.c27:disabled {
+  opacity: 0.5;
+}
+
+.c15 {
+  border: none;
+  padding: 2rem;
+  background-color: #E1E8ED;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #e1e8ed;
+  border-radius: 4px;
+}
+
+.c16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.c9 {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 1.6rem;
+  grid-auto-flow: column;
+  width: 100%;
+}
+
+.c10 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+
+.c5 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  justify-self: center;
+  width: 4rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c20 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0px 1px 4px rgba(150,164,176,0.1);
+  border-radius: 4px;
+}
+
+.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 3.2rem;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c22 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  color: #1c1e1f;
+}
+
+.c24 {
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 3.2rem;
+  text-align: center;
+  -webkit-letter-spacing: -0.266667px;
+  -moz-letter-spacing: -0.266667px;
+  -ms-letter-spacing: -0.266667px;
+  letter-spacing: -0.266667px;
+  color: #0079ff;
+}
+
+.c25 {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  background-color: #f4f8fa;
+  color: #1c1e1f;
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem;
+  width: 100%;
+  max-width: 56rem;
+  background: #ffffff;
+  border: 1px solid #e1e8ed;
+  box-shadow: 0px 1px 4px rgba(150,164,176,0.1);
+  border-radius: 8px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 3.1rem;
+}
+
+.c26 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  background-color: #f4f8fa;
+  min-height: calc(100% - 7.9rem);
+}
+
+@media all and (max-width:768px) {
+  .c1 {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 24px;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c6 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c7 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c23 {
+    display: none;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c27 {
+    width: 100%;
+    min-width: 0px;
+    padding: 1.6rem;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c5 {
+    width: 3.2rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c22 {
+    font-size: 1.6rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c24 {
+    font-size: 2.6rem;
+    line-height: 3.2rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c3 {
+    padding: 2.4rem;
+  }
+}
+
+@media all and (max-width:768px) {
+  .c0 {
+    margin-top: 7.9rem;
+  }
+}
+
+<SavingGoal>
+  <styled.div
+    data-test="component-saving-goal"
+  >
+    <div
+      className="c0"
+      data-test="component-saving-goal"
+    >
+      <styled.p>
+        <p
+          className="c1"
+        >
+          Let's plan your 
+          <styled.span>
+            <span
+              className="c2"
+            >
+              saving goal
+            </span>
+          </styled.span>
+          .
+        </p>
+      </styled.p>
+      <BuyHouseGoal>
+        <styled.div>
+          <div
+            className="c3"
+          >
+            <GoalHero
+              description="Saving goal"
+              iconSrc="test-file-stub"
+              title="Buy a house"
+            >
+              <styled.div
+                data-test="component-goal-hero"
+              >
+                <div
+                  className="c4"
+                  data-test="component-goal-hero"
+                >
+                  <Component
+                    src="test-file-stub"
+                  >
+                    <styled.img
+                      data-test="component-icon"
+                      src="test-file-stub"
+                    >
+                      <img
+                        className="c5"
+                        data-test="component-icon"
+                        src="test-file-stub"
+                      />
+                    </styled.img>
+                  </Component>
+                  <styled.p>
+                    <p
+                      className="c6"
+                    >
+                      Buy a house
+                    </p>
+                  </styled.p>
+                  <styled.p>
+                    <p
+                      className="c7"
+                    >
+                      Saving goal
+                    </p>
+                  </styled.p>
+                </div>
+              </styled.div>
+            </GoalHero>
+            <styled.div>
+              <div
+                className="c8"
+              />
+            </styled.div>
+            <CalculatorInputs
+              callback={[Function]}
+            >
+              <styled.div
+                data-test="component-calculator-input"
+              >
+                <div
+                  className="c9"
+                  data-test="component-calculator-input"
+                >
+                  <styled.div>
+                    <div
+                      className="c10"
+                    >
+                      <styled.p>
+                        <p
+                          className="c11"
+                        >
+                          Total Amount
+                        </p>
+                      </styled.p>
+                      <Component
+                        icon="test-file-stub"
+                        onChangeCallback={[Function]}
+                      >
+                        <styled.div
+                          data-test="component-currency-input-with-icon"
+                        >
+                          <div
+                            className="c12"
+                            data-test="component-currency-input-with-icon"
+                          >
+                            <styled.img
+                              data-test="component-currency-input-icon"
+                              src="test-file-stub"
+                            >
+                              <img
+                                className="c13"
+                                data-test="component-currency-input-icon"
+                                src="test-file-stub"
+                              />
+                            </styled.img>
+                            <CurrencyInput
+                              allowNegative={false}
+                              autoFocus={true}
+                              className="inputAmount"
+                              decimalSeparator="."
+                              inputType="text"
+                              maxLength="12"
+                              onChange={[Function]}
+                              onChangeEvent={[Function]}
+                              precision="2"
+                              prefix=""
+                              selectAllOnFocus={true}
+                              style={
+                                Object {
+                                  "background": "#ffffff",
+                                  "border": "none",
+                                  "display": "flex",
+                                  "fontSize": "2rem",
+                                  "fontWeight": "600",
+                                  "lineHeight": "2.4rem",
+                                  "padding": "1.6rem",
+                                  "width": "100%",
+                                }
+                              }
+                              suffix=""
+                              thousandSeparator=","
+                              value="0"
+                            >
+                              <input
+                                className="inputAmount"
+                                maxLength="12"
+                                onChange={[Function]}
+                                onFocus={[Function]}
+                                onMouseUp={[Function]}
+                                style={
+                                  Object {
+                                    "background": "#ffffff",
+                                    "border": "none",
+                                    "display": "flex",
+                                    "fontSize": "2rem",
+                                    "fontWeight": "600",
+                                    "lineHeight": "2.4rem",
+                                    "padding": "1.6rem",
+                                    "width": "100%",
+                                  }
+                                }
+                                type="text"
+                                value="0.00"
+                              />
+                            </CurrencyInput>
+                          </div>
+                        </styled.div>
+                      </Component>
+                    </div>
+                  </styled.div>
+                  <styled.div>
+                    <div
+                      className="c10"
+                    >
+                      <styled.p>
+                        <p
+                          className="c11"
+                        >
+                          Reach goal by
+                        </p>
+                      </styled.p>
+                      <DateInput
+                        differenceDatesCallback={[Function]}
+                        iconSrcLeft="test-file-stub"
+                        iconSrcRight="test-file-stub"
+                      >
+                        <styled.div
+                          data-test="component-date-input"
+                        >
+                          <div
+                            className="c14"
+                            data-test="component-date-input"
+                          >
+                            <Component
+                              backgroundColor="#E1E8ED"
+                              disabled={true}
+                              handleClick={[Function]}
+                              onKeyUp={[Function]}
+                            >
+                              <styled.button
+                                backgroundColor="#E1E8ED"
+                                data-test="component-button-selection"
+                                disabled={true}
+                                handleClick={[Function]}
+                                onClick={[Function]}
+                                onKeyUp={[Function]}
+                              >
+                                <button
+                                  className="c15"
+                                  data-test="component-button-selection"
+                                  disabled={true}
+                                  onClick={[Function]}
+                                  onKeyUp={[Function]}
+                                >
+                                  <img
+                                    src="test-file-stub"
+                                  />
+                                </button>
+                              </styled.button>
+                            </Component>
+                            <styled.span
+                              data-test="component-date-display"
+                            >
+                              <span
+                                className="c16"
+                                data-test="component-date-display"
+                              >
+                                <styled.span
+                                  className="month"
+                                  data-test="component-month-text"
+                                >
+                                  <span
+                                    className="c17 month"
+                                    data-test="component-month-text"
+                                  >
+                                    October
+                                  </span>
+                                </styled.span>
+                                <styled.span
+                                  className="year"
+                                  data-test="component-year-text"
+                                >
+                                  <span
+                                    className="c18 year"
+                                    data-test="component-year-text"
+                                  >
+                                    2020
+                                  </span>
+                                </styled.span>
+                              </span>
+                            </styled.span>
+                            <Component
+                              backgroundColor="#E1E8ED"
+                              handleClick={[Function]}
+                              onKeyUp={[Function]}
+                            >
+                              <styled.button
+                                backgroundColor="#E1E8ED"
+                                data-test="component-button-selection"
+                                handleClick={[Function]}
+                                onClick={[Function]}
+                                onKeyUp={[Function]}
+                              >
+                                <button
+                                  className="c15"
+                                  data-test="component-button-selection"
+                                  onClick={[Function]}
+                                  onKeyUp={[Function]}
+                                >
+                                  <img
+                                    src="test-file-stub"
+                                  />
+                                </button>
+                              </styled.button>
+                            </Component>
+                          </div>
+                        </styled.div>
+                      </DateInput>
+                    </div>
+                  </styled.div>
+                </div>
+              </styled.div>
+            </CalculatorInputs>
+            <styled.div>
+              <div
+                className="c19"
+              />
+            </styled.div>
+            <Card
+              amount="$0"
+              primaryInfo={
+                <React.Fragment>
+                  Monthly
+                  <styled.span>
+                     Amount
+                  </styled.span>
+                </React.Fragment>
+              }
+              secondaryInfo={
+                <React.Fragment>
+                  You are plaining
+                   
+                  <strong>
+                    1
+                     monthly 
+                    deposit
+                  </strong>
+                   
+                  to reach your 
+                  <strong>
+                    $
+                    0
+                     
+                  </strong>
+                  goal by
+                   
+                  <strong>
+                    October
+                     
+                    2020
+                  </strong>
+                  .
+                </React.Fragment>
+              }
+            >
+              <styled.article
+                data-test="component-card"
+              >
+                <article
+                  className="c20"
+                  data-test="component-card"
+                >
+                  <styled.div>
+                    <div
+                      className="c21"
+                    >
+                      <styled.p>
+                        <p
+                          className="c22"
+                        >
+                          Monthly
+                          <styled.span>
+                            <span
+                              className="c23"
+                            >
+                               Amount
+                            </span>
+                          </styled.span>
+                        </p>
+                      </styled.p>
+                      <styled.p>
+                        <p
+                          className="c24"
+                        >
+                          $0
+                        </p>
+                      </styled.p>
+                    </div>
+                  </styled.div>
+                  <styled.p>
+                    <p
+                      className="c25"
+                    >
+                      You are plaining
+                       
+                      <strong>
+                        1
+                         monthly 
+                        deposit
+                      </strong>
+                       
+                      to reach your 
+                      <strong>
+                        $
+                        0
+                         
+                      </strong>
+                      goal by
+                       
+                      <strong>
+                        October
+                         
+                        2020
+                      </strong>
+                      .
+                    </p>
+                  </styled.p>
+                </article>
+              </styled.article>
+            </Card>
+            <styled.div>
+              <div
+                className="c19"
+              />
+            </styled.div>
+            <styled.div>
+              <div
+                className="c26"
+              >
+                <Component
+                  backgroundColor="#1B31A8"
+                  borderRadius="3.2rem"
+                  color="#FFFFFF"
+                  disabled={true}
+                  handleClick={[Function]}
+                >
+                  <styled.button
+                    backgroundColor="#1B31A8"
+                    borderRadius="3.2rem"
+                    color="#FFFFFF"
+                    data-test="component-button-primary"
+                    disabled={true}
+                    handleClick={[Function]}
+                    onClick={[Function]}
+                  >
+                    <button
+                      className="c27"
+                      color="#FFFFFF"
+                      data-test="component-button-primary"
+                      disabled={true}
+                      onClick={[Function]}
+                    >
+                      Confirm
+                    </button>
+                  </styled.button>
+                </Component>
+              </div>
+            </styled.div>
+          </div>
+        </styled.div>
+      </BuyHouseGoal>
+    </div>
+  </styled.div>
+</SavingGoal>
+`;
