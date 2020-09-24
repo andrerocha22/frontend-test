@@ -9,12 +9,12 @@ export const TitleText = styled.p`
   text-align: center;
   letter-spacing: -0.2px;
   color: #1b31a8;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   @media all and (max-width: 768px) {
     font-size: 1.8rem;
     line-height: 2.6rem;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 `;
 

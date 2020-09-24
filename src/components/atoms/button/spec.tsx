@@ -9,6 +9,7 @@ const defaultProps = {
   color: '#ffffff',
   backgroundColor: '#5555ff',
   borderRadius: '8px',
+  name: 'button-selection',
 };
 
 const mockCallBack = jest.fn();

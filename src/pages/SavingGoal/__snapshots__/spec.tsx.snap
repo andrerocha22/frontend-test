@@ -11,7 +11,7 @@ exports[`test calculator input calculator input snapshot test  1`] = `
   -ms-letter-spacing: -0.2px;
   letter-spacing: -0.2px;
   color: #1b31a8;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 
 .c11 {
@@ -100,6 +100,10 @@ exports[`test calculator input calculator input snapshot test  1`] = `
   border: none;
   padding: 2rem;
   background-color: #E1E8ED;
+}
+
+.c15:disabled {
+  opacity: 0.5;
 }
 
 .c14 {
@@ -323,7 +327,7 @@ exports[`test calculator input calculator input snapshot test  1`] = `
   .c1 {
     font-size: 1.8rem;
     line-height: 2.6rem;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
 }
 
@@ -607,20 +611,23 @@ exports[`test calculator input calculator input snapshot test  1`] = `
                               backgroundColor="#E1E8ED"
                               disabled={true}
                               handleClick={[Function]}
+                              name="left-button"
                               onKeyUp={[Function]}
                             >
                               <styled.button
                                 backgroundColor="#E1E8ED"
-                                data-test="component-button-selection"
+                                data-test="component-left-button"
                                 disabled={true}
                                 handleClick={[Function]}
+                                name="left-button"
                                 onClick={[Function]}
                                 onKeyUp={[Function]}
                               >
                                 <button
                                   className="c15"
-                                  data-test="component-button-selection"
+                                  data-test="component-left-button"
                                   disabled={true}
+                                  name="left-button"
                                   onClick={[Function]}
                                   onKeyUp={[Function]}
                                 >
@@ -664,18 +671,21 @@ exports[`test calculator input calculator input snapshot test  1`] = `
                             <Component
                               backgroundColor="#E1E8ED"
                               handleClick={[Function]}
+                              name="right-button"
                               onKeyUp={[Function]}
                             >
                               <styled.button
                                 backgroundColor="#E1E8ED"
-                                data-test="component-button-selection"
+                                data-test="component-right-button"
                                 handleClick={[Function]}
+                                name="right-button"
                                 onClick={[Function]}
                                 onKeyUp={[Function]}
                               >
                                 <button
                                   className="c15"
-                                  data-test="component-button-selection"
+                                  data-test="component-right-button"
+                                  name="right-button"
                                   onClick={[Function]}
                                   onKeyUp={[Function]}
                                 >

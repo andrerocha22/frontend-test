@@ -10,6 +10,7 @@ export interface ButtonStyledProps {
   borderRadius?: string;
   isActive?: boolean;
   disabled?: boolean;
+  name?: string;
 }
 
 export const ButtonPrimary: React.FunctionComponent<ButtonStyledProps> = (
@@ -35,7 +36,7 @@ export const ButtonSelection: React.FunctionComponent<ButtonStyledProps> = (
     <SelectionButton
       {...props}
       onClick={props.handleClick}
-      data-test="component-button-selection"
+      data-test={`component-${props.name}`}
       disabled={props.disabled}
       onKeyUp={props.onKeyUp}
     >

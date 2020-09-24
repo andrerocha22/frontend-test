@@ -11,17 +11,17 @@ const defaultProps = {
   secondaryInfo: 'Test secondary information',
 };
 
+const setup = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(<Card {...setupProps} />);
+};
+
+const setupMount = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  return mount(<Card {...setupProps} />);
+};
+
 describe('test card', () => {
-  const setup = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return shallow(<Card {...setupProps} />);
-  };
-
-  const setupMount = (props = {}) => {
-    const setupProps = { ...defaultProps, ...props };
-    return mount(<Card {...setupProps} />);
-  };
-
   let component: ShallowWrapper = undefined;
 
   test('renders without error', () => {

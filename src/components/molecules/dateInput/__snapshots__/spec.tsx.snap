@@ -8,6 +8,7 @@ exports[`test date input date input snapshot test 1`] = `
     backgroundColor="#E1E8ED"
     disabled={false}
     handleClick={[Function]}
+    name="left-button"
     onKeyUp={[Function]}
   >
     <img
@@ -33,6 +34,7 @@ exports[`test date input date input snapshot test 1`] = `
   <Component
     backgroundColor="#E1E8ED"
     handleClick={[Function]}
+    name="right-button"
     onKeyUp={[Function]}
   >
     <img
