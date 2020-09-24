@@ -31,4 +31,8 @@ export const SelectionButton = styled.button<ButtonStyledProps>`
   color: ${(props) => props.color};
   background-color: ${(props) => props.backgroundColor};
   border-radius: ${(props) => props.borderRadius};
+
+  &:disabled {
+    opacity: 0.5;
+  }
 `;
